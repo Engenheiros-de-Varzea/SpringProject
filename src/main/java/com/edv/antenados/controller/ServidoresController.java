@@ -2,6 +2,7 @@ package com.edv.antenados.controller;
 
 import com.edv.antenados.repository.Servidores;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
@@ -19,9 +20,9 @@ public class ServidoresController {
     private Servidores servidores;
     
     @RequestMapping
-    public ModelAndView pesquisa() {
+    public ModelAndView pesquisa(Pageable pageable) {
         ModelAndView mv = new ModelAndView("/servidor/ListagemServidores");
-        mv.addObject("servidores", servidores.findAll());
+        mv.addObject("servidores", servidores.findAll(pageable));
         
         return mv;
     }
