@@ -14,7 +14,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @Controller
 public class LoginController {
     
-    @RequestMapping("/TelaLoginAdministrador")
+    @RequestMapping("/login")
     public String screenLogin() {
         return "/administrador/TelaLoginAdministrador";
     }
