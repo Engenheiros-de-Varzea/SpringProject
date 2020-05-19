@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html lang="pt" xmlns="http://www.w3.org/1999/xhtml" 
+	xmlns:th="http://www.thymeleaf.org"
+	xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+	layout:decorator="layout/LayoutPadrao">
+    <head>
+        <title>Login Administrador</title>
+       
+    </head>
+    <body>
+        <th:block layout:fragment="conteudo">
+            <div class="login-box-panel">
+		<img alt="AlgaWorks" th:src="@{/layout/images/logo-antenados.png}"/>
+                
+                <div class="login-box-textfield-user-div">
+                    <input type="text" class="login-box-textfield-user"/>
+                </div>
+                <div class="login-box-textfield-password-div">
+                    <input type="password" class="login-box-textfield-password"/>
+                </div>
+                
+                <a href="javascript:history.back()" class="btn  login-box-button-access">Acessar</a>               
+            </div>
+        </th:block>    
+    </body>
+</html>
