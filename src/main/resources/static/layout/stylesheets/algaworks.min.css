@@ -39,17 +39,10 @@
 
 .aw-layout-content {
 	position: relative;
-	margin: 50px 0 0;
 	transition: all .5s
 }
 
 @media (min-width:992px) {
-	.aw-layout-content.is-toggled {
-		margin-left: 0
-	}
-	.aw-layout-content {
-		margin-left: 210px
-	}
 }
 
 .aw-layout-sidebar {

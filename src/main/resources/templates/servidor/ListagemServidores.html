@@ -10,16 +10,12 @@
 
 <body>
 <section layout:fragment="conteudo">
-
-    <div class="page-header">
+    <div class="content">
+    <div class="header">
         <div class="container-fluid">
-            <div class="row">
-                <div class="col-xs-10">
-                    <h1>
-                        Servidores
-                    </h1>
-                </div>
-            </div>
+            <h1>
+                Servidores
+            </h1>
         </div>
     </div>
 
@@ -47,7 +43,7 @@
                 <tbody>
                     <tr th:each="servidor : ${servidores}">
                         <td th:text="${servidor.id}"></td>
-                        <td><a href="#" th:text="${servidor.nome}"></a></td>
+                        <td th:text="${servidor.nome}"></td>
                         <td th:text="${servidor.cargo}"></td>
                         <td th:text="${servidor.regime}"></td>
                         <td class="table-pesq-produto-col-acoes">
@@ -62,7 +58,7 @@
             </table>
         </div>
     </div>
-
+    </div>
 </section>
 </body>
 </html>
