@@ -6,54 +6,130 @@
 
 /*Painel Login -----------------------*/
 .login-box-panel {
-        position: absolute;
-        width: 30%;
-        height: 37%;
-        top: 20%;
-        left: 35%;
-        color: #777;
-        background-color: #0f0f0f;
-	text-align: center;
-        border-radius: 10px;           
+    position: absolute;
+    width: 400px;
+    height: 380px;
+    top:  200px;
+    left: 550px;
+    color: #777;
+    background-color: #DCDCDC;
+    text-align: center;
+    border-radius: 10px;           
 }
+.login-box-panel-title{
+    position:absolute; 
+    width: 400px;
+    height: 50px;
+    top: 20px;
+    background-color: #DCDCDC;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 5em;       
+     
+     
+ }
+ 
+.login-box-panel-label-user{
+    position:absolute; 
+    width: 300px;
+    height: 20px;
+    top: 110px;
+    left: 50px; 
+    background-color: #DCDCDC;
+    display: flex;
+    align-items: center;
+    font-size: 1.1em;       
+ }  
 .login-box-textfield-user-div{
      position: absolute;
      width: 300px;
-     height: 30px;
+     height: 40px;
      background-color: #fff;
      text-align: center;
      border-radius: 3px;
-     top: 200px;
-     left: 60px
+     top: 135px;
+     left: 50px;
+     display: flex;
+     align-items: center;
+     justify-content: center    
  } 
+.login-box-textfield-user{
+     width: 289px;
+     height: 40px;
+     box-shadow: 0 0 0 0;
+     border: 0 none;
+     outline: 0;
+ } 
+
+ 
+.login-box-panel-label-senha{
+    position:absolute; 
+    width: 300px;
+    height: 20px;
+    top: 190px;
+    left: 50px; 
+    background-color: #DCDCDC;
+    display: flex;
+    align-items: center;
+    font-size: 1.1em;       
+ }  
 .login-box-textfield-password-div{
      position: absolute;
      width: 300px;
-     height: 30px;
+     height: 40px;
      background-color: #fff;
      text-align: center;
      border-radius: 3px;
-     top: 250px;
-     left: 60px
- }  
-.login-box-button-access{
-        position:absolute;
-        width: 70px;
-     	color: #fff;
-	background-color: #1e94d2;
-        top: 299px;
-        left:60px;
-	border-color: #1e94d2
-         
- }
-.login-box-textfield-user{
-     width: 100%;
-     height: 30px
+     top: 215px;
+     left: 50px;
+     display: flex;
+     align-items: center;
+     justify-content: center 
  } 
 .login-box-textfield-password{
-     width: 100%;
-     height: 30px
+     width: 289px;
+     height: 40px;
+     box-shadow: 0 0 0 0;
+     border: 0 none;
+     outline: 0;
+ }  
+ 
+.login-box-button-access{
+    position:absolute; 
+    width: 300px;
+    height: 40px;
+    color: #fff;
+    background-color: #1e94d2;
+    top: 299px;
+    left:50px;
+    border-color: #1e94d2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5em;  
+    border-radius: 3px
+    
+         
+ }
+.login-box-button-access:hover{
+    position:absolute; 
+    width: 300px;
+    height: 40px;
+    color: #1e94d2;
+    background-color: #fff;
+    text-decoration: none; 
+    top: 299px;
+    left:50px;
+    border-color: #1e94d2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5em;  
+    border-radius: 3px
  } 
+ 
+ 
 /*Painel Login -----------------------*/ 
  
 

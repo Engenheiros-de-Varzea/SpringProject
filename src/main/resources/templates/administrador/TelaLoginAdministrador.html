@@ -15,16 +15,17 @@ and open the template in the editor.
     <body>
         <th:block layout:fragment="conteudo">
             <div class="login-box-panel">
-		<img alt="Antenados" th:src="@{layout/images/logo-gray.png}"/>
-                
+                <div class="login-box-panel-title">Login</div>
+                <div class="login-box-panel-label-user">Nome de usuário</div>
                 <div class="login-box-textfield-user-div">
                     <input type="text" class="login-box-textfield-user"/>
                 </div>
+                <div class="login-box-panel-label-senha">Senha</div>
                 <div class="login-box-textfield-password-div">
                     <input type="password" class="login-box-textfield-password"/>
                 </div>
                 
-                <a href="javascript:history.back()" class="btn  login-box-button-access">Acessar</a>               
+                <a href="" class="login-box-button-access">Acessar</a>               
             </div>
         </th:block>    
     </body>
