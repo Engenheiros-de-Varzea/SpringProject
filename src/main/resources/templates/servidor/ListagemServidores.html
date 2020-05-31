@@ -49,7 +49,7 @@
                         <td class="table-pesq-produto-col-acoes">
                             <div class="btn-group">
                                 <button class="btn  btn-default btn-xs">
-                                    <i class="fa  fa-eye"></i>
+                                    <a th:href="@{/salarios/{id_servidor}(id_servidor=${servidor.id})}"><i class="fa  fa-eye"></i></a>
                                 </button>
                             </div>
                         </td>
@@ -57,7 +57,7 @@
                 </tbody>
             </table>
         </div>
-    </div>
+    </div>  
     </div>
 </section>
 </body>
