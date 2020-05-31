@@ -23,4 +23,10 @@ public class WebConfig extends WebMvcConfigurerAdapter {
         );
     }
     
+    @Bean
+    public DomainClassConverter<FormattingConversionService> domainClassConverter(
+        FormattingConversionService conversionService) {
+        return new DomainClassConverter<FormattingConversionService>(conversionService);
+    }
+    
 }
