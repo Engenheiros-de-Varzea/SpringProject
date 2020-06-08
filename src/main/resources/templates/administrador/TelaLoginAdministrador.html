@@ -14,19 +14,21 @@ and open the template in the editor.
     </head>
     <body>
         <th:block layout:fragment="conteudo">
-            <div class="login-box-panel">
-                <div class="login-box-panel-title">Login</div>
-                <div class="login-box-panel-label-user">Nome de usuário</div>
-                <div class="login-box-textfield-user-div">
-                    <input type="text" class="login-box-textfield-user"/>
+            <div class="login-box-panel-position">    
+                <div class="login-box-panel">
+                    <div class="login-box-panel-title">Login</div>
+                    <div class="login-box-panel-label-user">Nome de usuário</div>
+                    <div class="login-box-textfield-user-div">
+                        <input type="text" class="login-box-textfield-user"/>
+                    </div>
+                    <div class="login-box-panel-label-senha">Senha</div>
+                    <div class="login-box-textfield-password-div">
+                        <input type="password" class="login-box-textfield-password"/>
+                    </div>
+
+                    <a href="" class="login-box-button-access">Acessar</a>               
                 </div>
-                <div class="login-box-panel-label-senha">Senha</div>
-                <div class="login-box-textfield-password-div">
-                    <input type="password" class="login-box-textfield-password"/>
-                </div>
-                
-                <a href="" class="login-box-button-access">Acessar</a>               
-            </div>
+            </div>    
         </th:block>    
     </body>
 </html>
