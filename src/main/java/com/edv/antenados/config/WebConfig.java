@@ -7,6 +7,7 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.data.repository.support.DomainClassConverter;
 import org.springframework.format.support.FormattingConversionService;
 import org.springframework.http.HttpStatus;
+import org.springframework.web.servlet.config.annotation.ViewControllerRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter;
 
 @Configuration
@@ -28,5 +29,15 @@ public class WebConfig extends WebMvcConfigurerAdapter {
         FormattingConversionService conversionService) {
         return new DomainClassConverter<FormattingConversionService>(conversionService);
     }
+    
+   
+    //quando o usuario faz o login ele entra na tela de recomendacao
+    @Override
+    public void addViewControllers(ViewControllerRegistry registry) {
+       registry.addRedirectViewController("/","/recomendacao");
+       
+    }
+    
+    
     
 }

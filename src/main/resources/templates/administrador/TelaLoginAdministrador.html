@@ -17,16 +17,33 @@ and open the template in the editor.
             <div class="login-box-panel-position">    
                 <div class="login-box-panel">
                     <div class="login-box-panel-title">Login</div>
+                    
+                    <div class="login-box-mensagem">
+                            Por favor, faça o login.
+                    </div>
+                    
+                    <div class="login-box-mensagem-error is-error" th:if="${#bools.isTrue(param.error)}">
+                            O usuário e/ou senha não conferem.
+                    </div>
+                    
+                    <div class="login-box-mensagem-desconect " th:if="${#bools.isTrue(param.logout)}">
+                            Você foi desconectado.
+                    </div>
+                    
                     <div class="login-box-panel-label-user">Nome de usuário</div>
-                    <div class="login-box-textfield-user-div">
-                        <input type="text" class="login-box-textfield-user"/>
-                    </div>
-                    <div class="login-box-panel-label-senha">Senha</div>
-                    <div class="login-box-textfield-password-div">
-                        <input type="password" class="login-box-textfield-password"/>
-                    </div>
+                    
+                    <form th:action="@{/login}" method="post">
+                        <div class="login-box-textfield-user-div">
+                            <input name="username" type="text" class="login-box-textfield-user"/>
+                        </div>
+                        <div class="login-box-panel-label-senha">Senha</div>
+                        <div class="login-box-textfield-password-div">
+                            <input name="password" type="password" class="login-box-textfield-password"/>
+                        </div>
 
-                    <a href="" class="login-box-button-access">Acessar</a>               
+                        <button type="submit" class="login-box-button-access">Acessar</button> 
+                    </form>
+                    
                 </div>
             </div>    
         </th:block>    

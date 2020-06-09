@@ -38,11 +38,55 @@
      
  }
  
+ .login-box-mensagem{
+    position:absolute; 
+    width: 300px;
+    height: 20px;
+    top: 100px;
+    left: 50px; 
+    background-color: #DCDCDC;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2em;
+    font-weight: bold;
+ } 
+ 
+ .login-box-mensagem-error{
+    position:absolute; 
+    width: 300px;
+    height: 20px;
+    top: 100px;
+    left: 50px; 
+    background-color: #DCDCDC;
+    color:#B22222;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2em;
+    font-weight: bold;
+ } 
+ 
+  .login-box-mensagem-desconect{
+    position:absolute; 
+    width: 300px;
+    height: 20px;
+    top: 100px;
+    left: 50px; 
+    background-color: #DCDCDC;
+    color:#32CD32;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2em;
+    font-weight: bold;
+ } 
+ 
 .login-box-panel-label-user{
     position:absolute; 
     width: 300px;
     height: 20px;
-    top: 110px;
+    top: 130px;
     left: 50px; 
     background-color: #DCDCDC;
     display: flex;
@@ -56,7 +100,7 @@
      background-color: #fff;
      text-align: center;
      border-radius: 3px;
-     top: 135px;
+     top: 155px;
      left: 50px;
      display: flex;
      align-items: center;
@@ -75,7 +119,7 @@
     position:absolute; 
     width: 300px;
     height: 20px;
-    top: 190px;
+    top: 210px;
     left: 50px; 
     background-color: #DCDCDC;
     display: flex;
@@ -89,7 +133,7 @@
      background-color: #fff;
      text-align: center;
      border-radius: 3px;
-     top: 215px;
+     top: 235px;
      left: 50px;
      display: flex;
      align-items: center;
@@ -109,7 +153,7 @@
     height: 40px;
     color: #fff;
     background-color: #1e94d2;
-    top: 299px;
+    top: 309px;
     left:50px;
     border-color: #1e94d2;
     display: flex;
@@ -127,7 +171,7 @@
     color: #1e94d2;
     background-color: #fff;
     text-decoration: none; 
-    top: 299px;
+    top: 309px;
     left:50px;
     border-color: #1e94d2;
     display: flex;
