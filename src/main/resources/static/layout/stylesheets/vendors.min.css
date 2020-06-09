@@ -8404,6 +8404,7 @@ fieldset[disabled] .navbar-inverse .btn-link:hover {
 }
 
 .pagination>li>a,
+.pagination>li>button,
 .pagination>li>span {
 	position: relative;
 	float: left;
@@ -8417,6 +8418,7 @@ fieldset[disabled] .navbar-inverse .btn-link:hover {
 }
 
 .pagination>li:first-child>a,
+.pagination>li:first-child>button,
 .pagination>li:first-child>span {
 	margin-left: 0;
 	border-bottom-left-radius: 2px;
@@ -8424,6 +8426,7 @@ fieldset[disabled] .navbar-inverse .btn-link:hover {
 }
 
 .pagination>li:last-child>a,
+.pagination>li:last-child>button,
 .pagination>li:last-child>span {
 	border-bottom-right-radius: 2px;
 	border-top-right-radius: 2px
@@ -8431,6 +8434,8 @@ fieldset[disabled] .navbar-inverse .btn-link:hover {
 
 .pagination>li>a:focus,
 .pagination>li>a:hover,
+.pagination>li>button:focus,
+.pagination>li>button:hover,
 .pagination>li>span:focus,
 .pagination>li>span:hover {
 	z-index: 2;
@@ -8442,6 +8447,9 @@ fieldset[disabled] .navbar-inverse .btn-link:hover {
 .pagination>.active>a,
 .pagination>.active>a:focus,
 .pagination>.active>a:hover,
+.pagination>.active>button,
+.pagination>.active>button:focus,
+.pagination>.active>button:hover,
 .pagination>.active>span,
 .pagination>.active>span:focus,
 .pagination>.active>span:hover {
@@ -8455,6 +8463,9 @@ fieldset[disabled] .navbar-inverse .btn-link:hover {
 .pagination>.disabled>a,
 .pagination>.disabled>a:focus,
 .pagination>.disabled>a:hover,
+.pagination>.disabled>button,
+.pagination>.disabled>button:focus,
+.pagination>.disabled>button:hover,
 .pagination>.disabled>span,
 .pagination>.disabled>span:focus,
 .pagination>.disabled>span:hover {

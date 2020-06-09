@@ -4,61 +4,100 @@
     xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
     layout:decorator="layout/LayoutPadrao">
 	
-<head>
-    <title>Antenados - Servidores</title>
-</head>
+    <head>
+        <title>Antenados - Servidores</title>
+    </head>
 
-<body>
-<section layout:fragment="conteudo">
-    <div class="content">
-    <div class="header">
-        <div class="container-fluid">
-            <h1>
-                Servidores
-            </h1>
-        </div>
-    </div>
+    <body>
+        <section layout:fragment="conteudo">
+            <div class="content">
+                <div class="header">
+                    <div class="container-fluid">
+                        <h1>
+                            Servidores
+                        </h1>
+                    </div>
+                </div>
 
-    <div class="container-fluid">
-        <form method="get" class="form-vertical  js-form-loading">
-            <div class="form-group">
-                <label for="input-produto-nome">Página</label>
-                <input id="input-produto-nome" name="page" type="text" class="form"/>
-                <button class="btn btn-primary" type="submit">
-                    Ir
-                </button>
+                <div class="container-fluid">
+                    <form method="get" class="form-vertical  js-form-loading">
+                        <div class="form-group">
+                            <label for="input-produto-nome">Página</label>
+                            <input id="input-produto-nome" name="page" type="text" class="form"/>
+
+                            <label for="num-amostragem">Cargo:</label>
+                            <select name="cargo">
+                                <option th:each="cargo : ${cargo}" th:value="${cargo}" th:text="${cargo}"></option>
+                            </select>
+
+                            <button class="btn btn-primary" type="submit">Ir</button>
+                        </div>
+                    </form>
+
+                    <div class="table-responsive">
+                        <table id="tabela-produtos" class="table  table-striped  table-bordered  table-hover  table-condensed  js-sticky-table">
+                            <thead class="aw-table-header-solid">
+                                <tr>
+                                    <th>ID</th>
+                                    <th class="table-pesq-produto-col-preco">Nome</th>
+                                    <th class="table-pesq-produto-col-estoque">Cargo</th>
+                                    <th class="table-pesq-produto-col-status">Regime</th>
+                                    <th class="table-pesq-produto-col-acoes">Detalhes</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr th:each="servidor : ${servidores}">
+                                    <td th:text="${servidor.id}"></td>
+                                    <td th:text="${servidor.nome}"></td>
+                                    <td th:text="${servidor.cargo}"></td>
+                                    <td th:text="${servidor.regime}"></td>
+                                    <td class="table-pesq-produto-col-acoes">
+                                        <div class="btn-group">
+                                            <button class="btn  btn-default btn-xs">
+                                                <a th:href="@{/salarios/{id_servidor}(id_servidor=${servidor.id})}"><i class="fa  fa-eye"></i></a>
+                                            </button>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>  
             </div>
-        </form>
-        <div class="table-responsive">
-            <table id="tabela-produtos" class="table  table-striped  table-bordered  table-hover  table-condensed  js-sticky-table">
-                <thead class="aw-table-header-solid">
-                    <tr>
-                        <th>ID</th>
-                        <th class="table-pesq-produto-col-preco">Nome</th>
-                        <th class="table-pesq-produto-col-estoque">Cargo</th>
-                        <th class="table-pesq-produto-col-status">Regime</th>
-                        <th class="table-pesq-produto-col-acoes">Detalhes</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr th:each="servidor : ${servidores}">
-                        <td th:text="${servidor.id}"></td>
-                        <td th:text="${servidor.nome}"></td>
-                        <td th:text="${servidor.cargo}"></td>
-                        <td th:text="${servidor.regime}"></td>
-                        <td class="table-pesq-produto-col-acoes">
-                            <div class="btn-group">
-                                <button class="btn  btn-default btn-xs">
-                                    <a th:href="@{/salarios/{id_servidor}(id_servidor=${servidor.id})}"><i class="fa  fa-eye"></i></a>
-                                </button>
-                            </div>
-                        </td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
-    </div>  
-    </div>
-</section>
-</body>
+
+            <div class="row">
+                <div class="col-xs-12  col-md-4  aw-text-xs-left  aw-text-md-left">
+                    <ul class="aw-pagination-info" th:each="servidor, iterStat : ${servidoresAll}" th:if="${iterStat.index >= iterStat.size-1}">
+                        <span th:text="${servidor.id}"></span>
+                        <span> servidores encontrados.</span>
+                    </ul>
+                </div>
+                
+                <form method="get" class="form-vertical  js-form-loading">
+                
+                    <div class="col-xs-12  col-md-4  aw-text-xs-center  aw-text-md-center">
+                        <nav aria-label="Navegação de página exemplo">
+                            <ul class="pagination">
+                                <li><button name="page" value="0" type="submit">Primeiro</button></li>
+                                <li th:each="i : ${#numbers.sequence(1, 8)}" th:class="(${currentPage} == (${i} - 1))? 'active'"><button name="page" th:value="${i} - 1" th:text="${i}" type="submit"></button></li>
+                                <li><button name="page" value="7" type="submit">Último</button></li>
+                            </ul>
+                        </nav>
+                    </div>
+                
+                    <div class="col-xs-12  col-md-4  aw-text-xs-right  aw-text-md-right">
+                        <label for="num-amostragem">Exibir por página:</label>
+
+                        <select name="size" id="size">
+                            <option th:each="i : ${#numbers.sequence(10,50,10)}" th:value="${i}" th:text="${i}" th:selected="${qntServInPage} == ${i}"></option>
+                        </select>
+
+                        <button class="btn btn-primary" type="submit" name="page" th:value="${currentPage}">
+                            Ir
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </section>
+    </body>
 </html>
