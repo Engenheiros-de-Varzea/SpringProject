@@ -1,37 +1,34 @@
 <!DOCTYPE html>
-<!--
-To change this license header, choose License Headers in Project Properties.
-To change this template file, choose Tools | Templates
-and open the template in the editor.
--->
 <html lang="pt" xmlns="http://www.w3.org/1999/xhtml" 
 	xmlns:th="http://www.thymeleaf.org"
 	xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
 	layout:decorator="layout/LayoutPadrao">
+    
     <head>
         <title>Login Administrador</title>
        
     </head>
+    
     <body>
         <th:block layout:fragment="conteudo">
             <div class="login-box-panel-position">    
                 <div class="login-box-panel">
                     <div class="login-box-panel-title">Login</div>
-                    
+
                     <div class="login-box-mensagem">
                             Por favor, faça o login.
                     </div>
-                    
+
                     <div class="login-box-mensagem-error is-error" th:if="${#bools.isTrue(param.error)}">
                             O usuário e/ou senha não conferem.
                     </div>
-                    
-                    <div class="login-box-mensagem-desconect " th:if="${#bools.isTrue(param.logout)}">
+
+                    <div class="login-box-mensagem-desconect" th:if="${#bools.isTrue(param.logout)}">
                             Você foi desconectado.
                     </div>
-                    
+
                     <div class="login-box-panel-label-user">Nome de usuário</div>
-                    
+
                     <form th:action="@{/login}" method="post">
                         <div class="login-box-textfield-user-div">
                             <input name="username" type="text" class="login-box-textfield-user"/>
@@ -43,9 +40,9 @@ and open the template in the editor.
 
                         <button type="submit" class="login-box-button-access">Acessar</button> 
                     </form>
-                    
+
                 </div>
             </div>    
-        </th:block>    
+        </th:block>  
     </body>
 </html>

@@ -66,7 +66,7 @@
             </div>
 
             <div class="row">
-                <div class="col-xs-12  col-md-4  aw-text-xs-left  aw-text-md-left">
+                <div class="col-xs-12  col-md-4">
                     <ul class="aw-pagination-info" th:each="servidor, iterStat : ${servidoresAll}" th:if="${iterStat.index >= iterStat.size-1}">
                         <span th:text="${servidor.id}"></span>
                         <span> servidores encontrados.</span>
@@ -75,7 +75,7 @@
                 
                 <form method="get" class="form-vertical  js-form-loading">
                 
-                    <div class="col-xs-12  col-md-4  aw-text-xs-center  aw-text-md-center">
+                    <div class="col-xs-12  col-md-4">
                         <nav aria-label="Navegação de página exemplo">
                             <ul class="pagination">
                                 <li><button name="page" value="0" type="submit">Primeiro</button></li>
@@ -85,7 +85,7 @@
                         </nav>
                     </div>
                 
-                    <div class="col-xs-12  col-md-4  aw-text-xs-right  aw-text-md-right">
+                    <div class="col-xs-12  col-md-4  aw-text-md-right">
                         <label for="num-amostragem">Exibir por página:</label>
 
                         <select name="size" id="size">

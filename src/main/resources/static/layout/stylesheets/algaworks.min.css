@@ -34,7 +34,7 @@
 		margin-left: 0
 	}
 	.aw-layout-footer {
-		margin-left: 210px
+		margin-left: 0px
 	}
 }
 
@@ -70,7 +70,7 @@
 		margin-left: 0
 	}
 	.aw-layout-sidebar.is-toggled {
-		margin-left: -211px
+		margin-left: 0px
 	}
 }
 

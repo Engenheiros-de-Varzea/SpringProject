@@ -12,11 +12,11 @@ import org.springframework.web.bind.annotation.RequestMapping;
  * @author teste
  */
 @Controller
-public class CadastroController {
+public class TrendsController {
     
-    @RequestMapping("/recomendacao")
+    @RequestMapping("/trends")
     public String screenRecommendation() {
-        return "/administrador/CadastroRecomendacao";
+        return "/administrador/Trends";
     }
     
 }

@@ -31,10 +31,10 @@ public class WebConfig extends WebMvcConfigurerAdapter {
     }
     
    
-    //quando o usuario faz o login ele entra na tela de recomendacao
+    //quando o usuario faz o login ele entra na tela de trends
     @Override
     public void addViewControllers(ViewControllerRegistry registry) {
-       registry.addRedirectViewController("/","/recomendacao");
+       registry.addRedirectViewController("/","/trends");
        
     }
     

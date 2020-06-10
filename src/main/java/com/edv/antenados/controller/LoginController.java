@@ -23,7 +23,7 @@ public class LoginController {
             //quando o usuario já está logado e tenta entrar na tela de login 
             //ele é redirecionado para outra tela, no caso para tela servidor
         }
-        return "/administrador/TelaLoginAdministrador";
+        return "/administrador/LoginAdmin";
     }
     
 }

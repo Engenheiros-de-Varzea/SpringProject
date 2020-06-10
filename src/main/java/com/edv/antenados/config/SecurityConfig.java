@@ -26,7 +26,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter{
     @Override
     protected void configure(AuthenticationManagerBuilder auth) throws Exception {
         auth.inMemoryAuthentication()
-                .withUser("adm").password("1234").roles("adm");
+                .withUser("admin").password("1234").roles("adm");
     }
 
     
@@ -42,8 +42,8 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter{
     protected void configure(HttpSecurity http) throws Exception {
         http               
             .authorizeRequests()             
-                //Exigir que o usuario seja adm para acessar a pagina
-                .antMatchers("/recomendacao").hasRole("adm") 
+                //Exigir que o usuario seja adm para acessar a página
+                .antMatchers("/trends").hasRole("adm") 
                 .and()             
             .formLogin()
                 //permitir que todo mundo acesse o login

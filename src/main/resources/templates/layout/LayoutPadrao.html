@@ -24,16 +24,17 @@
 </head>
 <body>
     <div class="aw-layout-page">
+        <div class="brand">
+            <a class="menu-brand" href="#"><img alt="Antenados" th:src="@{/layout/images/logo.png}"/></a>
+        </div>
         <nav class="menu-navigation-icons">
-            <a href="/recomendacao" class="menu-magenta"><i class="fa fa-camera-retro"></i><span>Recomendações</span></a>
-            <a href="#" class="menu-blue"><i class="fa fa-code"></i><span>Projetos</span></a>
-            <a href="/servidores" class="menu-green"><i class="fa fa-comment"></i><span>Servidores</span></a>
-            <a href="/salarios" class="menu-yellow"><i class="fa fa-plane"></i><span>Salários</span></a>
-            <a href="/login" class="menu-red"><i class="fa fa-heart"></i><span>Login</span></a>
-            <a th:href="@{/logout}" class="menu-green " ><i class="fa fa-heart"></i><span>Logout</span></a>
+            <a sec:authorize="isAuthenticated()" href="/trends" title="Trends" class="menu-magenta"><i class="fa fa-line-chart"></i><span>Trends</span></a>
+            <a href="#" title="Projetos" class="menu-blue"><i class="fa fa-pencil-square"></i><span>Projetos</span></a>
+            <a href="/servidores" title="Servidores" class="menu-green"><i class="fa fa-users"></i><span>Servidores</span></a>
+            <a href="/salarios" title="Salários" class="menu-yellow"><i class="fa fa-money"></i><span>Salários</span></a>
+            <a sec:authorize="isAuthenticated()" th:href="@{/logout}" title="Logout" class="menu-red "><i class="fa fa-user"></i><span>Logout</span></a>
+            <a sec:authorize="isAuthenticated() == False" href="/login" title="Login" class="menu-red"><i class="fa fa-user"></i><span>Login</span></a>
         </nav>
-        
-        <!-- Logo <a href="#"><img alt="Antenados" th:src="@{/layout/images/logo.png}"/></a> -->
         
         <section class="aw-layout-content  js-content" layout:fragment="conteudo"></section>
 
