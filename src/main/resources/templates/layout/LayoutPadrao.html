@@ -8,7 +8,7 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
 	<meta name="viewport" content="width=device-width, initial-scale=1"/>
 
-	<title>Spring e Layout Atacama</title>
+	<title>Antenados</title>
 
 	<link rel="stylesheet" type="text/css" th:href="@{/layout/stylesheets/vendors.min.css}"/>
 	<link rel="stylesheet" type="text/css" th:href="@{/layout/stylesheets/algaworks.min.css}"/>
@@ -25,13 +25,14 @@
 <body>
     <div class="aw-layout-page">
         <div class="brand">
-            <a class="menu-brand" href="#"><img alt="Antenados" th:src="@{/layout/images/logo.png}"/></a>
+            <a href="/index"><img alt="Antenados" th:src="@{/layout/images/logo-inverted.png}"/></a>
         </div>
         <nav class="menu-navigation-icons">
-            <a sec:authorize="isAuthenticated()" href="/trends" title="Trends" class="menu-magenta"><i class="fa fa-line-chart"></i><span>Trends</span></a>
-            <a href="#" title="Projetos" class="menu-blue"><i class="fa fa-pencil-square"></i><span>Projetos</span></a>
+            <a href="/index" Title="Home" class="menu-magenta"><i class="fa fa-home"></i><span>Home</span></a>
+            <a href="/projetos" title="Projetos" class="menu-blue"><i class="fa fa-pencil-square"></i><span>Projetos</span></a>
             <a href="/servidores" title="Servidores" class="menu-green"><i class="fa fa-users"></i><span>Servidores</span></a>
             <a href="/salarios" title="Salários" class="menu-yellow"><i class="fa fa-money"></i><span>Salários</span></a>
+            <a sec:authorize="isAuthenticated()" href="/trends" title="Trends" class="menu-orange"><i class="fa fa-line-chart"></i><span>Trends</span></a>
             <a sec:authorize="isAuthenticated()" th:href="@{/logout}" title="Logout" class="menu-red "><i class="fa fa-user"></i><span>Logout</span></a>
             <a sec:authorize="isAuthenticated() == False" href="/login" title="Login" class="menu-red"><i class="fa fa-user"></i><span>Login</span></a>
         </nav>

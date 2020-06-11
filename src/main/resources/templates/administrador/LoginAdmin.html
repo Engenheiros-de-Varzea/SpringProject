@@ -5,7 +5,7 @@
 	layout:decorator="layout/LayoutPadrao">
     
     <head>
-        <title>Login Administrador</title>
+        <title>Antenados - Login do Administrador</title>
        
     </head>
     
@@ -27,12 +27,12 @@
                             Você foi desconectado.
                     </div>
 
-                    <div class="login-box-panel-label-user">Nome de usuário</div>
-
                     <form th:action="@{/login}" method="post">
+                        <div class="login-box-panel-label-user">Nome de usuário</div>
                         <div class="login-box-textfield-user-div">
                             <input name="username" type="text" class="login-box-textfield-user"/>
                         </div>
+                        
                         <div class="login-box-panel-label-senha">Senha</div>
                         <div class="login-box-textfield-password-div">
                             <input name="password" type="password" class="login-box-textfield-password"/>

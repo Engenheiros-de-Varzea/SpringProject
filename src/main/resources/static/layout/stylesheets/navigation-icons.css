@@ -1,14 +1,14 @@
 .brand {
     float: left;
     margin: 0px 0px -60px 0px;
-    padding: 8px 15px;
+    padding: 7px 15px;
     z-index: 1;
 }
 
 .menu-navigation-icons {
     font-family: Arial, Helvetica, sans-serif;
     text-align: center;
-    font-size:0;
+    font-size: 0;
     background-color: gray;
 }
 
@@ -71,8 +71,38 @@
     display:none;
 }
 
-@media (max-width: 800px) {
-    .menu-navigation-icons{
+@media (max-width: 700px) {
+    .brand {
+        display: inline-block;
+        float: left;
+        margin: 0px 0px 0px 0px; 
+    }
+}
+
+/* Para cada ícone incluido no menu acrescentar o max-width conforme seu dimensional. */
+/* Para 631px está sendo considerado: 152px (logo) + 6 * 80px (botões) = 632px - 1. */
+
+@media (max-width: 631px) {
+    .brand a img{
+        width: auto;
+        height: 26px;
+    }
+    .menu-navigation-icons a {
+        font-size: 20px;
+        width: 40px;
+        height: 40px;
+    }
+    
+    .menu-navigation-icons a span {
+        font-size: 0px;
+    }
+}
+
+/* Para cada ícone incluido no menu acrescentar o max-width conforme seu dimensional. */
+/* Para 349px está sendo considerado: 110px (logo) + 6 * 40px (botões) = 350px - 1. */
+
+@media (max-width: 349px) {
+    .brand{
         display:none;
     }
 
@@ -82,5 +112,21 @@
 
     .slicknav_menu {
         display:block;
+    }
+}
+
+/* Para cada ícone incluido no menu acrescentar o max-width conforme seu dimensional. */
+/* Para 239px está sendo considerado: 6 * 40px (botões) = 240px - 1. */
+
+@media (max-width: 239px) {
+    .menu-navigation-icons a{
+        width: 0px;
+        height: 40px;
+        color: #ffffff;
+        background-color: #232526; 
+    }
+    
+    .menu-navigation-icons a i {
+        font-size: 0px;
     }
 }

@@ -26,6 +26,7 @@
 	height: 50px;
 	margin: 0;
 	border-top: 1px solid #eee;
+        background-color: white;
 	transition: all .5s
 }
 
@@ -205,6 +206,18 @@
 	color: #777;
 	line-height: 4;
 	text-align: center
+}
+
+@media (max-width: 359px) {
+    .aw-footer-disclaimer {
+        font-size: 60%;
+    }
+}
+
+@media (max-width: 245px) {
+    .aw-footer-disclaimer {
+        display: none;
+    }
 }
 
 .aw-logged-user {

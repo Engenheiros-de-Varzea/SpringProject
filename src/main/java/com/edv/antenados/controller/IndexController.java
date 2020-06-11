@@ -4,11 +4,11 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 @Controller
-public class TrendsController {
+public class IndexController {
     
-    @RequestMapping("/trends")
+    @RequestMapping("/index")
     public String screenRecommendation() {
-        return "/administrador/Trends";
+        return "/index/Index";
     }
     
 }
