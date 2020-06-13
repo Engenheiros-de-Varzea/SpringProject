@@ -26,16 +26,6 @@ public class SalarioController {
 
         return mv;
     }
-    
-     /*
-    @RequestMapping(method = RequestMethod.POST)
-    public ModelAndView visualizar(@RequestParam("id_servidor") Integer id_servidor) {
-        ModelAndView mv = new ModelAndView("/salario/ListagemSalarios");
-        mv.addObject("salarios", salarios.findByServidor(id_servidor));
-        
-        return mv;
-    }
-    */
 
     @RequestMapping("/{id_servidor}")
     public ModelAndView visualizar(@PathVariable Integer id_servidor) {

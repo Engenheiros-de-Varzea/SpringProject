@@ -36,7 +36,7 @@ public class WebConfig extends WebMvcConfigurerAdapter {
     public void addViewControllers(ViewControllerRegistry registry) {
        registry.addRedirectViewController("/","/trends");
        
-    }
+    }    
     
     
     
