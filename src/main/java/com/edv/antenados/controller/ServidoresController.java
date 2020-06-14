@@ -98,13 +98,13 @@ public class ServidoresController {
     {
         int countPage;
         
-        if (currentPage < 6)
+        if (currentPage < 4)
         {
-            countPage = 6;
+            countPage = 4;
         }
-        else if (currentPage > (lastPage - 6))
+        else if (currentPage > (lastPage - 4))
         {
-            countPage = lastPage - 5;
+            countPage = lastPage - 3;
         }
         else
         {

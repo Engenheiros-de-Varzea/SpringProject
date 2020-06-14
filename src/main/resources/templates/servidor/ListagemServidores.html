@@ -71,27 +71,28 @@
                     </div>
                 </div>  
             </div>
-
-            <div class="row">
-                <div class="col-xs-12  col-md-4">
-                    <ul class="aw-pagination-info">
-                        <li th:text="${qntServ} + ' servidores encontrados.'"></li>
-                    </ul>
+            
+            <div class="table-responsive">
+                <div class="col-sm-3  aw-text-sm-left">
+                    <div class="aw-pagination-info">
+                        <span class="fa  fa-circle  fa-circle-itemized"></span>
+                        <span th:text="${qntServ} + ' servidores encontrados.'"></span>
+                    </div>
                 </div>
                 
                 <form method="get" class="form-vertical  js-form-loading">
                 
-                    <div class="col-xs-12  col-md-4">
+                    <div class="col-sm-6  aw-text-sm-center">
                         <nav aria-label="Navegação de página exemplo">
                             <ul class="pagination">
                                 <li th:class="(${currentPage} == 0)? 'active'"><button name="page" value="0" type="submit">Primeiro</button></li>
-                                <li th:each="i : ${#numbers.sequence(navPage - 5, navPage + 5)}" th:class="(${currentPage} == (${i} - 1))? 'active'"><button name="page" th:value="${i} - 1" th:text="${i}" type="submit"></button></li>
+                                <li th:each="i : ${#numbers.sequence(navPage - 3, navPage + 3)}" th:class="(${currentPage} == (${i} - 1))? 'active'"><button name="page" th:value="${i} - 1" th:text="${i}" type="submit"></button></li>
                                 <li th:class="(${currentPage} == (${qntPage} - 1))? 'active'"><button name="page" th:value="${qntPage} - 1" type="submit">Último</button></li>
                             </ul>
                         </nav>
                     </div>
                 
-                    <div class="col-xs-12  col-md-4  aw-text-md-right">
+                    <div class="col-sm-3  aw-text-sm-right">
                         <label for="num-amostragem">Exibir por página:</label>
 
                         <select name="size" id="size" onchange="this.form.submit()">
