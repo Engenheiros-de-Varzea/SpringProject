@@ -19,23 +19,25 @@
                             Por favor, faça o login.
                     </div>
 
-                    <div class="login-box-mensagem-error is-error" th:if="${#bools.isTrue(param.error)}">
+                    <div class="login-box-mensagem-error is-error alert alert-danger fade in alert-dismissible" th:if="${#bools.isTrue(param.error)}">
                             O usuário e/ou senha não conferem.
+                            <a href="#" class="close" data-dismiss="alert" aria-label="close" title="close">×</a>
                     </div>
 
-                    <div class="login-box-mensagem-desconect" th:if="${#bools.isTrue(param.logout)}">
+                    <div class="login-box-mensagem-disconnect alert alert-success fade in alert-dismissible" th:if="${#bools.isTrue(param.logout)}">
                             Você foi desconectado.
+                            <a href="#" class="close" data-dismiss="alert" aria-label="close" title="close">×</a>
                     </div>
 
                     <form th:action="@{/login}" method="post">
-                        <div class="login-box-panel-label-user">Nome de usuário</div>
+                        <div class="login-box-panel-label-user">Nome de usuário:</div>
                         <div class="login-box-textfield-user-div">
-                            <input name="username" type="text" class="login-box-textfield-user"/>
+                            <input name="username" placeholder="Usuário" type="text" class="login-box-textfield-user"/>
                         </div>
                         
-                        <div class="login-box-panel-label-senha">Senha</div>
+                        <div class="login-box-panel-label-senha">Senha:</div>
                         <div class="login-box-textfield-password-div">
-                            <input name="password" type="password" class="login-box-textfield-password"/>
+                            <input name="password" placeholder="Ssenha" type="password" class="login-box-textfield-password"/>
                         </div>
 
                         <button type="submit" class="login-box-button-access">Acessar</button> 

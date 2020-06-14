@@ -54,30 +54,24 @@
     position: absolute; 
     width: 300px;
     height: 20px;
-    top: 100px;
-    left: 50px; 
-    background-color: #DCDCDC;
-    color: #B22222;
+    top: 92px;
+    left: 50px;
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 1.2em;
-    font-weight: bold;
+    font-size: 1.1em;
 } 
  
-.login-box-mensagem-desconect{
+.login-box-mensagem-disconnect{
     position: absolute; 
     width: 300px;
     height: 20px;
-    top: 100px;
+    top: 92px;
     left: 50px; 
-    background-color: #DCDCDC;
-    color: darkred;
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 1.2em;
-    font-weight: bold;
+    font-size: 1.1em;
 } 
  
 .login-box-panel-label-user{
