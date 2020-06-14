@@ -12,31 +12,17 @@
         <section layout:fragment="conteudo">
             <div class="container-fluid  index">
                 <div class="row  index-row">
-                    <div class="col-sm-4">
-                        <div class="col-sm-12">
-                            <h2>Pesquisas recomendadas:</h2>
-                        </div>
-                        
-                        <form class="form-vertical" action="/servidores">
-                            <div class="form-group">
-                                <div class="col-sm-12  aw-text-sm-center">
-                                    <button class="btn btn-success margin-4" type="submit">Maior salário</button>
-                                    <button class="btn btn-success margin-4" type="submit">Prefeito</button>
-                                    <button class="btn btn-success margin-4" type="submit">Maior desconto</button>
-                                    <button class="btn btn-success margin-4" type="submit">Busca programada 4</button>
-                                    <button class="btn btn-success margin-4" type="submit">Busca programada 5</button>
-                                </div>
-                            </div>
-                        </form>
+                    <div class="col-sm-12  index-row-brand">
+                        <img class="img-responsive  center-block" alt="Antenados" th:src="@{/layout/images/logo-slogan.png}"/>
                     </div>
+                </div>
+                
+                <div class="table-responsive">
+                    <div class="col-sm-12 height-50"></div>
                     
-                    <div class="col-sm-4">
-                        <div class="col-sm-12  index-row-brand">
-                            <img class="img-responsive  center-block" alt="Antenados" th:src="@{/layout/images/logo-slogan.png}"/>
-                        </div>
-                        
-                        <div class="col-sm-12 height-50"></div>
-                        
+                    <div class="col-sm-3"></div>
+                    
+                    <div class="col-sm-6">
                         <form class="form-vertical  col-sm-12" action="/servidores">
                             <div class="form-group">
                                 <div class="col-sm-8  aw-text-sm-left">
@@ -59,7 +45,7 @@
                                         <option value="11">Dez/2020</option>
                                     </select>
                                 </div>
-                                    
+
                                 <div class="col-sm-12  height-10"></div>
 
                                 <div class="col-sm-12">
@@ -80,10 +66,30 @@
                                 </div>
                             </div>
                         </form>
-                        
-                    </div>
+                     </div>
                     
-                    <div class="col-sm-4"></div>
+                    <div class="col-sm-3"></div>
+
+                    <div class="col-sm-12  height-10"></div>
+                    
+                </div>
+                    
+                <div class="table-responsive"> 
+                    <div class="col-sm-12 aw-text-sm-center">
+                            <h2>Pesquisas recomendadas:</h2>
+                        </div>
+                    
+                    <form class="form-vertical" action="/servidores">
+                        <div class="form-group">
+                            <div class="col-sm-12  aw-text-sm-center">
+                                <button class="btn btn-success margin-4" type="submit">Maior salário</button>
+                                <button class="btn btn-success margin-4" type="submit">Prefeito</button>
+                                <button class="btn btn-success margin-4" type="submit">Maior desconto</button>
+                                <button class="btn btn-success margin-4" type="submit">Busca programada 4</button>
+                                <button class="btn btn-success margin-4" type="submit">Busca programada 5</button>
+                            </div>
+                        </div>
+                    </form>
                     
                 </div>
             </div>
