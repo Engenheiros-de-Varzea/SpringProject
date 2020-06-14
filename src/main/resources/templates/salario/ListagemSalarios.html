@@ -25,6 +25,7 @@
                             <thead class="aw-table-header-solid">
                                 <tr>
                                     <th>ID</th>
+                                    <th>ID Servidor</th>
                                     <th class="table-pesq-produto-col-preco">Valor</th>
                                     <th class="table-pesq-produto-col-estoque">Descrição</th>
                                     <th class="table-pesq-produto-col-status">Tipo</th>
@@ -34,10 +35,11 @@
                             <tbody>
                                 <tr th:each="salario : ${salarios}">
                                     <td th:text="${salario.id}"></td>
-                                    <td th:text="'R$' + ${salario.valor}"></td>
+                                    <td th:text="${salario.id_servidor}"></td>
+                                    <td th:text="'R$ ' + ${#numbers.formatDecimal(salario.valor, 1, 'POINT', 2, 'COMMA')}"></td>
                                     <td th:text="${salario.descricao}"></td>
-                                    <td th:text="${salario.id_lancamento}"></td>
-                                    <td th:text="${salario.referencia}"></td>
+                                    <td th:text="${salario.id_lancamento == 1} ? 'Rendimento' : 'Desconto'"></td>
+                                    <td th:text="${#dates.format(salario.referencia, 'MMMM/yyyy')}"></td>
                                 </tr>
                             </tbody>
                         </table>

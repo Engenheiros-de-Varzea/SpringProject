@@ -7,7 +7,10 @@ import org.springframework.data.jpa.repository.Query;
 
 public interface Salarios extends JpaRepository<Salario, Integer> {
     
-    @Query(value = "SELECT * FROM salario s WHERE ID_SERVIDOR = ?1", nativeQuery = true)
+    @Query(value = "SELECT ID, ID_SERVIDOR, ID_LANCAMENTO, REFERENCIA, 'Salário Mensal' AS DESCRICAO, " +
+                        "SUM(CASE WHEN ID_LANCAMENTO = 1 THEN VALOR ELSE 0 END) - " +
+                        "SUM(CASE WHEN ID_LANCAMENTO = 2 THEN VALOR ELSE 0 END) VALOR, DT_INCLUSAO " +
+                    "FROM SALARIO WHERE ID_SERVIDOR=?1 GROUP BY REFERENCIA", nativeQuery = true)
     public List<Salario> findByServidor(Integer id_servidor);
     
 }
