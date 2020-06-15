@@ -33,8 +33,8 @@
             <a href="/servidores" title="Servidores" class="menu-green"><i class="fa fa-users"></i><span>Servidores</span></a>
             <a href="/salarios" title="Salários" class="menu-yellow"><i class="fa fa-money"></i><span>Salários</span></a>
             <a sec:authorize="isAuthenticated()" href="/trends" title="Trends" class="menu-orange"><i class="fa fa-line-chart"></i><span>Trends</span></a>
-            <a sec:authorize="isAuthenticated()" th:href="@{/logout}" title="Logout" class="menu-red "><i class="fa fa-user"></i><span>Logout</span></a>
-            <a sec:authorize="isAuthenticated() == False" href="/login" title="Login" class="menu-red"><i class="fa fa-user"></i><span>Login</span></a>
+            <a sec:authorize="isAuthenticated()" th:href="@{/logout}" title="Logout" class="menu-red "><i class="glyphicon glyphicon-log-out"></i><span>Logout</span></a>
+            <a sec:authorize="isAuthenticated() == False" href="/login" title="Login" class="menu-red"><i class="glyphicon glyphicon-log-in"></i><span>Login</span></a>
         </nav>
         
         <section class="aw-layout-content  js-content" layout:fragment="conteudo"></section>
