@@ -11,6 +11,6 @@ public interface Salarios extends JpaRepository<Salario, Integer> {
                         "SUM(CASE WHEN ID_LANCAMENTO = 1 THEN VALOR ELSE 0 END) - " +
                         "SUM(CASE WHEN ID_LANCAMENTO = 2 THEN VALOR ELSE 0 END) VALOR, DT_INCLUSAO " +
                     "FROM SALARIO WHERE ID_SERVIDOR=?1 GROUP BY REFERENCIA", nativeQuery = true)
-    public List<Salario> findByServidor(Integer id_servidor);
+    public List<Salario> findSalarioByServidor(Integer id_servidor);
     
 }

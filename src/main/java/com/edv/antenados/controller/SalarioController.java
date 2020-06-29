@@ -30,9 +30,9 @@ public class SalarioController {
     @RequestMapping("/{id_servidor}")
     public ModelAndView visualizar(@PathVariable Integer id_servidor) {
         ModelAndView mv = new ModelAndView("/salario/ListagemSalarios");
-        mv.addObject("salarios", salarios.findByServidor(id_servidor));
+        mv.addObject("salarios", salarios.findSalarioByServidor(id_servidor));
         
         return mv;
     }
-	
+    
 }
