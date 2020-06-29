@@ -1,6 +1,7 @@
 package com.edv.antenados.repository;
 
 import com.edv.antenados.model.Salario;
+import java.util.Date;
 import java.util.List;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
@@ -12,5 +13,8 @@ public interface Salarios extends JpaRepository<Salario, Integer> {
                         "SUM(CASE WHEN ID_LANCAMENTO = 2 THEN VALOR ELSE 0 END) VALOR, DT_INCLUSAO " +
                     "FROM SALARIO WHERE ID_SERVIDOR=?1 GROUP BY REFERENCIA", nativeQuery = true)
     public List<Salario> findSalarioByServidor(Integer id_servidor);
+    
+    @Query(value = "SELECT * FROM SALARIO WHERE ID_SERVIDOR=?1 AND REFERENCIA=?2", nativeQuery = true)
+    public List<Salario> findAllByServidorAndReferencia(Integer id_servidor, Date referencia);
     
 }
