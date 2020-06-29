@@ -9,7 +9,7 @@
     </head>
 
     <body>
-        <section layout:fragment="conteudo">
+        <section layout:fragment="conteudo">       
             <div class="content">
                 <div class="header">
                     <div class="container-fluid">
@@ -30,6 +30,7 @@
                                     <th class="table-pesq-produto-col-estoque">Descrição</th>
                                     <th class="table-pesq-produto-col-status">Tipo</th>
                                     <th class="table-pesq-produto-col-status">Período</th>
+                                    <th class="table-pesq-produto-col-acoes">Ações</th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -40,6 +41,13 @@
                                     <td th:text="${salario.descricao}"></td>
                                     <td th:text="${salario.id_lancamento == 1} ? 'Rendimento' : 'Desconto'"></td>
                                     <td th:text="${#dates.format(salario.referencia, 'MMMM/yyyy')}"></td>
+                                    <td class="table-pesq-produto-col-acoes">
+                                        <div class="btn-group">
+                                            <button class="btn  btn-default btn-xs">
+                                                <a class="" href="#">+</a>
+                                            </button>
+                                        </div>
+                                    </td>
                                 </tr>
                             </tbody>
                         </table>
