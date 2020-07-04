@@ -25,12 +25,12 @@
                     <div class="col-sm-6">
                         <form class="form-vertical  col-sm-12" action="/servidores">
                             <div class="form-group">
-                                <div class="col-sm-8  aw-text-sm-left">
-                                    <span>Selecione o mês de referência: </span>
+                                <div class="col-sm-2  aw-text-sm-left">
+                                    <span>Mês de refência:</span>
                                 </div>
 
-                                <div class="col-sm-4  aw-text-sm-right">
-                                    <select class="btn btn-primary padding-6dot5-12" name="data">
+                                <div class="col-sm-3  aw-text-sm-center">
+                                    <select class="btn btn-primary  padding-6dot5-12" name="data">
                                         <option>Data</option>
                                         <option value="1">Jan/2020</option>
                                         <option value="2">Fev/2020</option>
@@ -45,23 +45,45 @@
                                         <option value="11">Dez/2020</option>
                                     </select>
                                 </div>
+                                
+                                <div class="col-sm-2  aw-text-sm-left">
+                                    <span>Faixa Salarial: </span>
+                                </div>
+
+                                <div class="col-sm-5  aw-text-sm-right">
+                                    <select class="btn btn-primary padding-6dot5-12" name="data">
+                                        <option>Salário</option>
+                                        <option value="1">R$0,00 - R$1.000,00</option>
+                                        <option value="2">R$1.000,01 - R$2.000,00</option>
+                                        <option value="3">R$2.000,01 - R$3.000,00</option>
+                                        <option value="4">R$3.000,01 - R$4.000,00</option>
+                                        <option value="5">R$4.000,01 - R$5.000,00</option>
+                                        <option value="6">R$5.000,01 - R$7.500,00</option>
+                                        <option value="7">R$7.500,01 - R$10.000,00</option>
+                                        <option value="8">R$10.000,01 - R$12.500,00</option>
+                                        <option value="9">R$12.500,01 - R$15.000,00</option>
+                                        <option value="10">R$15.000,01 - R$20.000,00</option>
+                                        <option value="11">R$20.000,01 - R$30.000,00</option>
+                                        <option value="12">R$30.000,01 - R$40.000,00</option>
+                                        <option value="13">R$40.000,01 - R$50.000,00</option>
+                                        <option value="14">R$50.000,01 +</option>
+                                    </select>
+                                </div>
 
                                 <div class="col-sm-12  height-10"></div>
 
                                 <div class="col-sm-12">
                                     <div class="btn-group btn-group-justified">
-                                        <a id="search-cargo" class="btn btn-primary" th:classappend="active">Cargo</a>
-                                        <a id="search-salario" class="btn btn-primary" >Salário</a>
+                                        <a id="search-cargo" class="btn btn-primary" th:classappend="active">Nome</a>
+                                        <a id="search-salario" class="btn btn-primary" >Cargo</a>
+                                        <a id="search-salario" class="btn btn-primary" >Regime</a>
                                     </div>
                                 </div>
 
                                 <div class="col-sm-12  height-10"></div>
 
-                                <div class="col-sm-10">
-                                    <input id="main-search" placeholder="Buscar termo . . ." name="page" type="text" class="form-control"/>
-                                </div>
-
-                                <div class="col-sm-2">
+                                <div class="col-sm-12  index-search">
+                                    <input id="main-search" placeholder="Pesquisar termo . . ." name="exemplo" type="text" class="form-control"/>
                                     <button class="btn btn-primary  fa  fa-search" type="submit"></button>
                                 </div>
                             </div>
@@ -85,8 +107,8 @@
                                 <button class="btn btn-success margin-4" type="submit">Maior salário</button>
                                 <button class="btn btn-success margin-4" type="submit">Prefeito</button>
                                 <button class="btn btn-success margin-4" type="submit">Maior desconto</button>
-                                <button class="btn btn-success margin-4" type="submit">Busca programada 4</button>
-                                <button class="btn btn-success margin-4" type="submit">Busca programada 5</button>
+                                <button class="btn btn-success margin-4" type="submit">Pesquisa programada 4</button>
+                                <button class="btn btn-success margin-4" type="submit">Pesquisa programada 5</button>
                             </div>
                         </div>
                     </form>

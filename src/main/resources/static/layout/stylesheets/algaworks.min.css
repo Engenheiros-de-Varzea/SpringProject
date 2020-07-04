@@ -503,6 +503,17 @@
 	text-align: justify
 }
 
+.aw-vertical-alignment-xs-top {
+    vertical-align: top;
+}
+
+.aw-vertical-alignment-xs-middle {
+    vertical-align: middle;
+}
+
+.aw-vertical-alignment-xs-bottom {
+    vertical-align: bottom;
+}
 @media (min-width:768px) {
 	.aw-text-sm-left {
 		text-align: left
@@ -516,6 +527,17 @@
 	.aw-text-sm-justify {
 		text-align: justify
 	}
+        .aw-vertical-alignment-sm-top {
+            vertical-align: top;
+        }
+
+        .aw-vertical-alignment-sm-middle {
+            vertical-align: middle;
+        }
+
+        .aw-vertical-alignment-sm-bottom {
+            vertical-align: bottom;
+        }
 }
 
 @media (min-width:992px) {
@@ -531,6 +553,17 @@
 	.aw-text-md-justify {
 		text-align: justify
 	}
+        .aw-vertical-alignment-md-top {
+            vertical-align: top;
+        }
+
+        .aw-vertical-alignment-md-middle {
+            vertical-align: middle;
+        }
+
+        .aw-vertical-alignment-md-bottom {
+            vertical-align: bottom;
+        }
 }
 
 @media (min-width:1200px) {
@@ -546,6 +579,17 @@
 	.aw-text-lg-justify {
 		text-align: justify
 	}
+        .aw-vertical-alignment-lg-top {
+            vertical-align: top;
+        }
+
+        .aw-vertical-alignment-lg-middle {
+            vertical-align: middle;
+        }
+
+        .aw-vertical-alignment-lg-bottom {
+            vertical-align: bottom;
+        }
 }
 
 body,

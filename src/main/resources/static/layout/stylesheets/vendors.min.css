@@ -3,6 +3,16 @@
  *  License - http://fontawesome.io/license (Font: SIL OFL 1.1, CSS: MIT License)
  */
 
+.index-search input {
+    width: calc(100% - 42px);
+    display: inline-block;
+}
+
+.index-search button {
+    display: inline-block;
+    /*margim-bottom: 3px;  não funciona?*/
+}
+
 .padding-6dot5-12 {
     padding: 6.5px 12px !important;
 }
@@ -37,7 +47,7 @@
 .index-row {
     /*height: calc(100vh - 54px - 60px);
     overflow-y: auto;*/
-    padding: 50px 0 0 0
+    padding: 20px 0 0 0
 }
 
 .index-row div {
@@ -51,7 +61,7 @@
 }
 
 .index-row-brand img {
-    width: 350px;
+    width: 570px;
 }
 
 /*Painel Login -----------------------*/
