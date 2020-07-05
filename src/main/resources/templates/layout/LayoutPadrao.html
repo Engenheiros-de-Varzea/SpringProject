@@ -31,7 +31,6 @@
             <a href="/index" title="Home" class="menu-magenta"><i class="fa fa-home"></i><span>Home</span></a>
             <a href="/projetos" title="Projetos" class="menu-blue"><i class="fa fa-pencil-square"></i><span>Projetos</span></a>
             <a href="/servidores" title="Servidores" class="menu-green"><i class="fa fa-users"></i><span>Servidores</span></a>
-            <a href="/salarios" title="Salários" class="menu-yellow"><i class="fa fa-money"></i><span>Salários</span></a>
             <a sec:authorize="isAuthenticated()" href="/trends" title="Trends" class="menu-orange"><i class="fa fa-line-chart"></i><span>Trends</span></a>
             <a sec:authorize="isAuthenticated()" th:href="@{/logout}" title="Logout" class="menu-red "><i class="glyphicon glyphicon-log-out"></i><span>Logout</span></a>
             <a sec:authorize="isAuthenticated() == False" href="/login" title="Login" class="menu-red"><i class="glyphicon glyphicon-log-in"></i><span>Login</span></a>
