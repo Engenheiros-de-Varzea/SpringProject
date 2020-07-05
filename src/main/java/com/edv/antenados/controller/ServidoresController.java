@@ -1,12 +1,12 @@
 package com.edv.antenados.controller;
 
 import com.edv.antenados.model.Servidor;
+import com.edv.antenados.repository.Salarios;
 import com.edv.antenados.repository.Servidores;
 import java.util.ArrayList;
 import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
-import org.springframework.data.domain.PageImpl;
 import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -19,27 +19,30 @@ public class ServidoresController {
     @Autowired
     private Servidores servidores;
 
+    @Autowired
+    private Salarios salarios;
+    
     @RequestMapping
     public ModelAndView amostragem(Pageable pageable) {
         ModelAndView mv = new ModelAndView("/servidor/ListagemServidores");
         
-        //List<Servidor> listServ = filtro("", "", "", servidores.findAll());
-        
         mv.addObject("qntPage", (int) Math.ceil((double) servidores.qntServ() / (double) pageable.getPageSize()));
         mv.addObject("navPage", contNav(pageable.getPageNumber(), (int) Math.ceil((double) servidores.qntServ() / (double) pageable.getPageSize())));
-        //mv.addObject("qntServ", listServ.size());
         mv.addObject("qntServ", servidores.qntServ());
         mv.addObject("cargo", servidores.findAllCargo());
         mv.addObject("regime", servidores.findAllRegime());
         mv.addObject("qntServInPage", pageable.getPageSize());
         mv.addObject("currentPage", pageable.getPageNumber());
-        mv.addObject("servidores", servidores.findAll(pageable));
         
-        //mv.addObject("servidores", listServ);
+        Page<Servidor> servidores_encontrados = servidores.findAll(pageable);
+        for(Servidor servidor : servidores_encontrados){
+            servidor.setSalario(salarios.findSalarioByServidor(servidor.getId()));
+        }
+        mv.addObject("servidores", servidores_encontrados);
         
         return mv;
     }
-    
+        
     public List<Servidor> filtro(String nome, String cargo, String regime, List<Servidor> lista)
     {
         List<Servidor> filtro1 = new ArrayList<>();

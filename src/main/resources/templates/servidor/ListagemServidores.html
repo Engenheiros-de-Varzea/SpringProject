@@ -53,16 +53,40 @@
                                 </tr>
                             </thead>
                             <tbody>
-                                <tr th:each="servidor : ${servidores}">
+                                <tr th:each="servidor,iter : ${servidores}">
                                     <td th:text="${servidor.id}"></td>
                                     <td th:text="${servidor.nome}"></td>
                                     <td th:text="${servidor.cargo}"></td>
-                                    <td th:text="${servidor.regime}"></td>
+                                    <td th:text="${servidor.regime}"></td>  
                                     <td class="table-pesq-produto-col-acoes">
                                         <div class="btn-group">
-                                            <button class="btn  btn-default btn-xs">
-                                                <a th:href="@{/salarios/{id_servidor}(id_servidor=${servidor.id})}"><i class="fa  fa-eye"></i></a>
+                                            <button class="btn  btn-default btn-xs" data-toggle="modal" th:attr="data-target='#myModal'+${iter.index}">
+                                                <i class="fa  fa-money"></i>
                                             </button>
+                                            <!-- Modal -->
+                                            <div id="myModal" th:id="'myModal' + ${iter.index}" class="modal fade" role="dialog">
+                                                <div class="modal-dialog">
+
+                                                    <!-- Modal content-->
+                                                    <div class="modal-content">
+                                                        <div class="modal-header">
+                                                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                                            <h4 class="modal-title">Salário Mensal</h4>
+                                                        </div>
+                                                        <div class="modal-body">
+                                                            <div th:each="salario : ${servidor.salario}">
+                                                                <span th:text="${#dates.format(salario.referencia, 'MMMM/yyyy')}"></span>
+                                                                <span><i class="fa" th:classappend="${salario.id_lancamento == 1} ? fa-plus-square : fa-minus-square"></i></span>
+                                                                <span th:text="${salario.descricao} + ' - R$ ' + ${#numbers.formatDecimal(salario.valor, 1, 'POINT', 2, 'COMMA')}"></span>
+                                                            </div>
+                                                        </div>
+                                                        <div class="modal-footer">
+                                                            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                                                        </div>
+                                                    </div>
+
+                                                </div>
+                                            </div>
                                         </div>
                                     </td>
                                 </tr>
